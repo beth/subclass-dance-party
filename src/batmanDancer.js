@@ -2,7 +2,6 @@ var BatmanDancer = function(top, left, timeBetweenSteps){
     this.timeBetweenSteps = 3000;
     Dancer.call(this,top, left, this.timeBetweenSteps);
     this.$node.addClass('batman')
-
 };
 
 BatmanDancer.prototype = Object.create(Dancer.prototype);
