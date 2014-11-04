@@ -17,5 +17,5 @@ BatmanDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   //this.$node.toggle();
-  this.$node.fadeIn(4000);
+  this.$node.fadeToggle();
 };
