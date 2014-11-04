@@ -5,6 +5,11 @@ var MarcusDancer = function(top, left, timeBetweenSteps){
     this.top = top;
     this.left = left;
     this.$node.addClass('marcus');
+    this.$node.mouseover( function (event){
+      //event.preventDefault();
+     //console.log(this.timeBetweenSteps);
+     this.timeBetweenSteps *= 0.5;
+    }.bind(this))//dancer.faster.bind(dancer));
 
 };
 
