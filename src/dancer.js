@@ -40,5 +40,34 @@ Dancer.prototype.lineUp = function(){
   this.setPosition(this.top,this.left);
 };
 
+Dancer.prototype.closestNeighbors = function(n){
+  var x;
+  var y;
+  var closeDancers = [];
+  for(var i = 0;i<window.dancers.length;i++){
+    x = window.dancers[i].left;
+    y = window.dancers[i].top;
+    var result = Math.pow(this.top - y,2) + Math.pow(this.left - x,2)
+    result = Math.sqrt(result);
+    closeDancers.push({
+      dist: result,
+      left: x,
+      top: y
+    });
+  }
+  closeDancers = closeDancers.sort(function (a, b) {
+    if (a.dist > b.dist) {
+      return 1;
+    }
+    if (a.dist < b.dist) {
+      return -1;
+    }
+  // a must be equal to b
+  return 0;
+  }).splice(1,n);
+
+  return closeDancers;
+};
+
 // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
 // this one sets the position to some random default point within the body
