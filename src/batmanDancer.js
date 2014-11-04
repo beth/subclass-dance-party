@@ -12,7 +12,7 @@ BatmanDancer.prototype.step = function(){
   // toggle() is a jQuery method to show/hide the <span> tag.
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
-  this.$node.fadeToggle(this.timeBetweenSteps/2).fadeToggle(this.timeBetweenSteps/2);
+  this.$node.fadeIn(this.timeBetweenSteps/2).fadeOut(this.timeBetweenSteps/2);
   this.top = $("body").height() * Math.random();
   this.left = $("body").width() * Math.random();
   this.setPosition();
