@@ -5,6 +5,7 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -27,6 +28,9 @@ body, a:link, a:visited, a:active{
 }
 
 .dancer.batman {
-  border:10px solid green;
-
+  border:none;
+  border-radius:none;
+  height: 40px;
+  width: 40px;
+  content: url("img/batmantux.png");
 }
