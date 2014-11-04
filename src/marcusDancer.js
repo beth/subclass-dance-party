@@ -3,6 +3,7 @@ var MarcusDancer = function(top, left, timeBetweenSteps){
     Dancer.call(this,top, left, timeBetweenSteps);
     this.top = top;
     this.left = left;
+    this.$node.addClass('marcus');
 
 };
 

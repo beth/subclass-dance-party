@@ -34,3 +34,12 @@ body, a:link, a:visited, a:active{
   width: 40px;
   content: url("img/batmantux.png");
 }
+
+
+.dancer.marcus {
+  border:none;
+  border-radius:none;
+  height: 40px;
+  width: 40px;
+  content: url("img/bowtie.png");
+}
