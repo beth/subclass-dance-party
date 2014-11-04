@@ -2,14 +2,10 @@ var MarcusDancer = function(top, left, timeBetweenSteps){
 
     this.stepSize = 0.01;
     Dancer.call(this,top, left, timeBetweenSteps);
-    this.top = top;
-    this.left = left;
     this.$node.addClass('marcus');
     this.$node.mouseover( function (event){
-      //event.preventDefault();
-     //console.log(this.timeBetweenSteps);
      this.timeBetweenSteps *= 0.5;
-    }.bind(this))//dancer.faster.bind(dancer));
+    }.bind(this));
 
 };
 
@@ -27,5 +23,5 @@ MarcusDancer.prototype.step = function(){
   //this.$node.toggle();
   this.top += this.stepSize*($("body").height() * (Math.random()-.5));
   this.left += this.stepSize*($("body").width() * (Math.random()-.5));
-  this.setPosition(this.top,this.left);
+  this.setPosition();
 };
