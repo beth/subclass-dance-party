@@ -1,14 +1,12 @@
 var LoveDancer = function(top, left, timeBetweenSteps){
-
   this.contributors = 5;
   this.attraction = 0.1;
-  Dancer.call(this,top, left, timeBetweenSteps);
+  Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('love');
 };
 
 LoveDancer.prototype = Object.create(Dancer.prototype);
 LoveDancer.prototype.constructor = LoveDancer;
-
 
 LoveDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
@@ -24,7 +22,7 @@ LoveDancer.prototype.step = function(){
 
   this.left += this.attraction *(totX - this.left);
   this.top += this.attraction * (totY - this.top);
-  this.setPosition(this.left,this.top);
+  this.setPosition();
 };
 
 
