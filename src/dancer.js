@@ -38,7 +38,7 @@ Dancer.prototype.dance = function(){
 Dancer.prototype.lineUp = function(){
   this.top = 0;
   this.active = false;
-  this.setPosition(this.top,this.left);
+  this.setPosition();
 };
 
 Dancer.prototype.closestNeighbors = function(n){
