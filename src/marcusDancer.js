@@ -1,5 +1,6 @@
 var MarcusDancer = function(top, left, timeBetweenSteps){
 
+    this.stepSize = 0.01;
     Dancer.call(this,top, left, timeBetweenSteps);
     this.top = top;
     this.left = left;
@@ -19,7 +20,7 @@ MarcusDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   //this.$node.toggle();
-  this.top += 0.01*($("body").height() * (Math.random()-.5));
-  this.left += 0.01*($("body").width() * (Math.random()-.5));
+  this.top += this.stepSize*($("body").height() * (Math.random()-.5));
+  this.left += this.stepSize*($("body").width() * (Math.random()-.5));
   this.setPosition(this.top,this.left);
 };

@@ -29,6 +29,8 @@ $(document).ready(function(){
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
+    dancer.$node.on("mouseover", dancer.faster.bind(dancer));
+
   });
 
   $(".addLineupButton").on("click", function(event){
@@ -37,6 +39,7 @@ $(document).ready(function(){
       setTimeout(window.dancers[i].dance.bind(window.dancers[i]),3000);
     }
   });
+
 
 });
 
