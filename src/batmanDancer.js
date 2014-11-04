@@ -1,6 +1,6 @@
 var BatmanDancer = function(top, left, timeBetweenSteps){
-
-    Dancer.call(this,top, left, timeBetweenSteps);
+    this.timeBetweenSteps = 3000;
+    Dancer.call(this,top, left, this.timeBetweenSteps);
     this.$node.addClass('batman')
 
 };
@@ -17,5 +17,8 @@ BatmanDancer.prototype.step = function(){
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   //this.$node.toggle();
-  this.$node.fadeToggle();
+  this.$node.fadeToggle(this.timeBetweenSteps/2).fadeToggle(this.timeBetweenSteps/2);
+  this.top = $("body").height() * Math.random();
+  this.left = $("body").width() * Math.random();
+  this.setPosition(this.top,this.left)
 };
