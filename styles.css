@@ -29,6 +29,7 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 
+
 .dancer.batman {
   border:none;
   border-radius:none;
@@ -36,7 +37,6 @@ body, a:link, a:visited, a:active{
   width: 40px;
   content: url("img/batmantux.png");
 }
-
 
 .dancer.marcus {
   border:none;
@@ -52,4 +52,10 @@ body, a:link, a:visited, a:active{
   height: 40px;
   width: 40px;
   content: url("img/loveheart.png");
+}
+
+.dancer:hover{
+  border:1px solid white;
+  border-radius:40px;
+  position:absolute;
 }
