@@ -17,8 +17,13 @@ LoveDancer.prototype.step = function(){
     totX += neighbors[i].left;
     totY += neighbors[i].top;
   }
-  totX = totX/neighbors.length;
-  totY = totY/neighbors.length;
+  if(neighbors.length !== 0){
+    totX = totX/neighbors.length;
+    totY = totY/neighbors.length;
+  }else{
+    totX = 0;
+    totY = 0;
+  }
 
   this.left += this.attraction *(totX - this.left);
   this.top += this.attraction * (totY - this.top);
